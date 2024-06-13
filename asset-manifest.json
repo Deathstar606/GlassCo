@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/VerGo/static/css/main.a512488e.css",
-    "main.js": "/VerGo/static/js/main.e30a9c89.js",
-    "static/js/787.2e4ac314.chunk.js": "/VerGo/static/js/787.2e4ac314.chunk.js",
-    "static/media/man-with-sunglasses-wearing-white-t-shirt-posing.jpg": "/VerGo/static/media/man-with-sunglasses-wearing-white-t-shirt-posing.598941be6e6e5a5c87a4.jpg",
-    "static/media/cute-pretty-beautiful-woman-wears-loose-sweater-black-trousers-holds-her-hands-pocket.jpg": "/VerGo/static/media/cute-pretty-beautiful-woman-wears-loose-sweater-black-trousers-holds-her-hands-pocket.84d59f37df3190a32fdb.jpg",
-    "static/media/About.png": "/VerGo/static/media/About.6eee21cba95a1003395d.png",
-    "static/media/14.jpg": "/VerGo/static/media/14.0df15ec6c8da5d5fc4d4.jpg",
-    "static/media/casual-men-dress-code-style-luxe-digital.jpg": "/VerGo/static/media/casual-men-dress-code-style-luxe-digital.b608ecec8c57737b7634.jpg",
-    "static/media/casual-men-dress-code-style-luxe-digital phn.jpg": "/VerGo/static/media/casual-men-dress-code-style-luxe-digital phn.86029a5a5e8e9cc190fd.jpg",
-    "static/media/FALL-WINTER-TRENDS.jpg": "/VerGo/static/media/FALL-WINTER-TRENDS.26242ebf10ebd38b829c.jpg",
-    "static/media/FALL-WINTER-TRENDS phn.jpg": "/VerGo/static/media/FALL-WINTER-TRENDS phn.2f7af57744a0ab203cb3.jpg",
-    "static/media/casual-dressing-tips1.jpg": "/VerGo/static/media/casual-dressing-tips1.6a3264fe40ef3e04f8a2.jpg",
-    "static/media/15.jpg": "/VerGo/static/media/15.2b8ebf6a5e4b4c3bc538.jpg",
-    "static/media/sunglass.png": "/VerGo/static/media/sunglass.d2aa228aea456ebaa596.png",
-    "static/media/casual-dressing-tips1 phn.jpg": "/VerGo/static/media/casual-dressing-tips1 phn.84124512ffc21d9f6e91.jpg",
-    "index.html": "/VerGo/index.html",
-    "main.a512488e.css.map": "/VerGo/static/css/main.a512488e.css.map",
-    "main.e30a9c89.js.map": "/VerGo/static/js/main.e30a9c89.js.map",
-    "787.2e4ac314.chunk.js.map": "/VerGo/static/js/787.2e4ac314.chunk.js.map"
+    "main.css": "/GlassCo/static/css/main.a512488e.css",
+    "main.js": "/GlassCo/static/js/main.fae50bf3.js",
+    "static/js/787.2e4ac314.chunk.js": "/GlassCo/static/js/787.2e4ac314.chunk.js",
+    "static/media/man-with-sunglasses-wearing-white-t-shirt-posing.jpg": "/GlassCo/static/media/man-with-sunglasses-wearing-white-t-shirt-posing.598941be6e6e5a5c87a4.jpg",
+    "static/media/cute-pretty-beautiful-woman-wears-loose-sweater-black-trousers-holds-her-hands-pocket.jpg": "/GlassCo/static/media/cute-pretty-beautiful-woman-wears-loose-sweater-black-trousers-holds-her-hands-pocket.84d59f37df3190a32fdb.jpg",
+    "static/media/About.png": "/GlassCo/static/media/About.6eee21cba95a1003395d.png",
+    "static/media/14.jpg": "/GlassCo/static/media/14.0df15ec6c8da5d5fc4d4.jpg",
+    "static/media/casual-men-dress-code-style-luxe-digital.jpg": "/GlassCo/static/media/casual-men-dress-code-style-luxe-digital.b608ecec8c57737b7634.jpg",
+    "static/media/casual-men-dress-code-style-luxe-digital phn.jpg": "/GlassCo/static/media/casual-men-dress-code-style-luxe-digital phn.86029a5a5e8e9cc190fd.jpg",
+    "static/media/FALL-WINTER-TRENDS.jpg": "/GlassCo/static/media/FALL-WINTER-TRENDS.26242ebf10ebd38b829c.jpg",
+    "static/media/FALL-WINTER-TRENDS phn.jpg": "/GlassCo/static/media/FALL-WINTER-TRENDS phn.2f7af57744a0ab203cb3.jpg",
+    "static/media/casual-dressing-tips1.jpg": "/GlassCo/static/media/casual-dressing-tips1.6a3264fe40ef3e04f8a2.jpg",
+    "static/media/15.jpg": "/GlassCo/static/media/15.2b8ebf6a5e4b4c3bc538.jpg",
+    "static/media/sunglass.png": "/GlassCo/static/media/sunglass.d2aa228aea456ebaa596.png",
+    "static/media/casual-dressing-tips1 phn.jpg": "/GlassCo/static/media/casual-dressing-tips1 phn.84124512ffc21d9f6e91.jpg",
+    "index.html": "/GlassCo/index.html",
+    "main.a512488e.css.map": "/GlassCo/static/css/main.a512488e.css.map",
+    "main.fae50bf3.js.map": "/GlassCo/static/js/main.fae50bf3.js.map",
+    "787.2e4ac314.chunk.js.map": "/GlassCo/static/js/787.2e4ac314.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a512488e.css",
-    "static/js/main.e30a9c89.js"
+    "static/js/main.fae50bf3.js"
   ]
 }
