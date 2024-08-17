@@ -41,8 +41,8 @@ const mapDispatchToProps = (dispatch) => ({    //method defination
 const Main = (props) => {
 
   useEffect(() => {
-    props.fetchSun(),
-    props.fetchOrders()
+    props.fetchSun();
+    props.fetchOrders();
   }, []);
 
   const GlassId = () => {
