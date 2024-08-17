@@ -2,9 +2,10 @@ import React, { useEffect } from 'react';
 import HeroSec from './HeroSec';
 import NewArr from "./NewArrival";
 import Deats from './Details';
+import Order from './OrderPage';
 import Catlist from './Cats';
-import Mens from './Mens';
-import Carts from './Cart';
+import Mens from './ProductList';
+import AppointmentForm from './Appointment';
 import BestSell from './BestSellers';
 /* import RenderItem from './Featured'; */
 import AboutUs from "./AboutUs";
@@ -14,8 +15,7 @@ import { Container, Row, Breadcrumb, BreadcrumbItem } from "react-bootstrap";
 import Example from './Navbar';
 import { Link, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { googleLogin, loginUser, logoutUser, fetchClothes, fetchDeals, fetchFeats,
-          fetchReviews, postReview, fetchCarts, postCart, deleteCart } from '../Redux/ActionCreators';
+import { fetchSun, fetchOrders, addNewOrder, removeExistingOrder, loginUser, logoutUser } from '../Redux/ActionCreators';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const mapStateToProps = (state) => {
@@ -23,30 +23,26 @@ const mapStateToProps = (state) => {
     auth: state.auth,
 /*     deals: state.deals,
     feats: state.feats, */
-    clothes: state.clothes,
-    reviews: state.reviews,
+    sunglass: state.sunglass,
+    orders: state.orders
     //cart: state.cart
   }
 }
 
 const mapDispatchToProps = (dispatch) => ({    //method defination
-  fetchDeals: () => {dispatch(fetchDeals())},
-  fetchFeats: () => {dispatch(fetchFeats())},
-  fetchClothes: () => {dispatch(fetchClothes())},
-  fetchReviews: () => dispatch(fetchReviews()),
-  postReview: (glassId, rating, comment) => dispatch(postReview(glassId, rating, comment)),
-  fetchCarts: () => {dispatch(fetchCarts())},
-  postCart: (clothId, image, size, color, price) => dispatch(postCart(clothId, image, size, color, price)),
-  deleteCart: (clothId) => {dispatch(deleteCart(clothId))},
-  googleLogin: () => dispatch(googleLogin()),
-  loginUser: (creds) => dispatch(loginUser(creds)),
-  logoutUser: () => dispatch(logoutUser())
+  fetchSun: () => {dispatch(fetchSun())},
+  fetchOrders: () => {dispatch(fetchOrders())},
+  addNewOrder: (order) => {dispatch(addNewOrder(order))},
+  removeExistingOrder: (order_id) => {dispatch(removeExistingOrder(order_id))},
+  loginUser: (creds) => {dispatch(loginUser(creds))},
+  logoutUser: () => {dispatch(logoutUser())}
 });
 
 const Main = (props) => {
 
   useEffect(() => {
-    props.fetchClothes()
+    props.fetchSun(),
+    props.fetchOrders()
   }, []);
 
   const GlassId = () => {
@@ -59,25 +55,39 @@ const Main = (props) => {
           exit= {{x: -1000, opacity: 0}}>
           <div>
             <Deats
-              clothes={
-                props.clothes.clothes.filter(
-                  (cloth) => cloth._id === match.pathname.split('/')[2]
+              deats={
+                props.sunglass.sunglass.filter(
+                  (glass) => glass._id === match.pathname.split('/')[2]
                 )[0]
               }
-              reviews={
+              similar={props.sunglass.sunglass}
+              addNewOrder={props.addNewOrder}
+/*               reviews={
                 props.reviews.reviews.filter(
                   (rev) => rev.cloth === match.pathname.split('/')[2]
                 )
               }
-              similar={props.clothes}
               isLoading={props.clothes.isLoading}
               errMess={props.clothes.errMess}
-              postReview={props.postReview}
-              //postCart={props.postCart}
+              postReview={props.postReview} */
             />
           </div>
         </motion.div>
       );
+  };
+
+  const AllSun = ({ sunglasses }) => {
+    return <Mens glasses={sunglasses.sunglass} />
+  }
+
+  const FilteredMensSun = ({ sunglasses }) => {
+    const filteredSunglasses = sunglasses.sunglass.filter(sunglass => sunglass.gender === 'Men' || sunglass.gender === 'Unisex');
+    return <Mens glasses={filteredSunglasses} />;
+  };
+
+  const FilteredWoMensSun = ({ sunglasses }) => {
+    const filteredSunglasses = sunglasses.sunglass.filter(sunglass => sunglass.gender === 'Women' || sunglass.gender === 'Unisex');
+    return <Mens glasses={filteredSunglasses} />;
   };
 
   const Home = () => {
@@ -89,10 +99,10 @@ const Main = (props) => {
             animate= {{x: 0, opacity: 1}}
             exit= {{x: -1000, opacity: 0}}>
             <HeroSec />
-            <NewArr clothe={props.clothes}/>
+            <NewArr sunglass={props.sunglass}/>
             <Category />
             <AboutUs />
-            <BestSell/>
+            <BestSell sunglass={props.sunglass}/>
           </motion.div>
         </>
       );
@@ -104,12 +114,18 @@ const Main = (props) => {
         auth={props.auth}
         loginUser={props.loginUser}
         logoutUser={props.logoutUser}
-        googleLogin={props.googleLogin}
+        orders={props.orders.orders}
+        sunglass={props.sunglass.sunglass}
+        removeExistingOrder={props.removeExistingOrder}
       />
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/home/:clothId" element={<GlassId />} />
-          <Route path="/home/men" element={<Mens clothes={props.clothes} />} />
+          <Route path="/home/doctors" element={<AppointmentForm />} />
+          <Route path="/home/sunglass" element={<AllSun sunglasses={props.sunglass} />} />
+          <Route path="/home/sunglass/men" element={<FilteredMensSun sunglasses={props.sunglass} />} />
+          <Route path="/home/sunglass/women" element={<FilteredWoMensSun sunglasses={props.sunglass} />} />
+          <Route path="/home/orders" element={<Order orders={props.orders.orders} removeExistingOrder={props.removeExistingOrder}/>} />
           <Route
             path="*"
             element={<Navigate to="/home" replace />}

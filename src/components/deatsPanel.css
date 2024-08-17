@@ -1,0 +1,40 @@
+.side-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 400px; /* Adjust width as needed */
+    background: #fff;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+    padding: 20px;
+    z-index: 1000;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.panel-content {
+    margin-top: 20px;
+}
+
+.panel-content h3 {
+    margin-bottom: 20px;
+}
+
+.panel-content Button {
+    display: block;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .side-panel {
+        width: 100%;
+    }
+}

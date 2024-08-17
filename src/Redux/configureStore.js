@@ -1,10 +1,7 @@
 import { legacy_createStore as createStore, combineReducers, applyMiddleware } from 'redux';
 import { Auth } from './auth';
-import { Deals } from './deals';
-import { Clothes } from './clothes';
-import { Reviews } from './reviews';
-import { Feats } from './feat';
-import { cart } from './cart';
+import { Sunglass } from './sunglass';
+import { Orders } from './orders';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 
@@ -12,11 +9,8 @@ export const ConfigStore = () => {            //used in app.js
     const store = createStore(                //buit in function of redux
         combineReducers({
             auth: Auth,
-            deals: Deals,
-            clothes: Clothes,
-            feats: Feats,
-            reviews: Reviews,
-            cart
+            sunglass: Sunglass,
+            orders: Orders,
 /*             promotions: Promotions,
             leaders: Leaders,
             ...createForms({
