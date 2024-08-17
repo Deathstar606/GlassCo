@@ -286,6 +286,33 @@ body {
   flex-wrap: wrap; /* Wrap to the next line if there's not enough space */
 }
 
+.bubble {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.mobile-shoping {
+  position: absolute;
+  top: 29px;
+  right: 80px;
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 10;
+}
 /* Individual color box */
 .color-box {
   width: 20px; /* Width of the color box */

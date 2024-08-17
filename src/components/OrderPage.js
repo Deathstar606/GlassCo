@@ -10,9 +10,11 @@ import {
   CardImg,
   Container,
 } from 'reactstrap';
+import { Breadcrumbs } from './ProductList';
 import axios from 'axios';
 import { baseUrl } from '../Redux/shared/baseurl';
 import { motion, useInView as Fview } from "framer-motion";
+import MediaQuery from 'react-responsive';
 
 function Order (props) {
   const [total, setTotal] = useState(0);
@@ -97,6 +99,12 @@ function Order (props) {
       animate= {{x: 0, opacity: 1}}
       exit= {{x: -1000, opacity: 0}}>
           <div>
+            <MediaQuery maxWidth={639}>
+              <Breadcrumbs items={[
+                { link: '/home', active: false },
+                { name: "Home", link: '', active: true }
+              ]} />
+            </MediaQuery>
             <h1 className='p-4 text-center row-header' style={{fontSize: "clamp(54px, 4vw, 100px)"}}>Confirm Your Order</h1>
             <p className='text-center pb-3'>Some Description About Our Establishment</p>
             <Container className="pb-5">
@@ -197,7 +205,7 @@ function Order (props) {
                         <React.Fragment key={index}>
                           <Row style={{ marginBottom: '20px' }}>
                             <Col md={4} className="mx-0">
-                              <CardImg src={baseUrl + order.image} alt={order.name} />
+                              <CardImg className='mb-4' src={baseUrl + order.image} alt={order.name} />
                             </Col>
                             <Col md={8}>
                               <strong>{order.name}<br /></strong>

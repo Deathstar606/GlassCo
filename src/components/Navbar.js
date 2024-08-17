@@ -3,7 +3,6 @@ import { Container, Navbar, NavbarBrand, Nav, NavItem, Button, Form, FormGroup, 
 import BurgerMenu from "./Burger"
 import MediaQuery from 'react-responsive';
 import { Link as RouterLink } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
 import { FaGoogle, FaTimes, FaUser, FaShoppingBag } from 'react-icons/fa';
 import { baseUrl } from '../Redux/shared/baseurl';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -58,7 +57,7 @@ export const OrderBar = ({ orders, handleOrdPage, removeOrder }) => {
                 <React.Fragment key={index}>
                   <Row style={{ marginBottom: '20px' }}>
                     <Col md={4} className="mx-0">
-                      <CardImg src={baseUrl + order.image} alt={order.name} />
+                      <CardImg className='mb-4' src={baseUrl + order.image} alt={order.name} />
                     </Col>
                     <Col md={8}>
                       <strong>{order.name}<br /></strong>
@@ -122,7 +121,19 @@ const Example = (props) => {
   return (
     <>
       <MediaQuery maxWidth={639}>
-        <BurgerMenu/>
+        {!ordPage && (
+          <>
+          <BurgerMenu/>
+            <div className='mobile-shoping'>
+              <FaShoppingBag onClick={handleOrdPage} className='ml-3'/>
+                {props.orders.length > 0 && (
+                  <div className="bubble">
+                    {props.orders.length}
+                  </div>
+                )}
+            </div>          
+          </>
+        )}
       </MediaQuery>
       <div className='d-flex justify-content-center' /* style={{ backgroundColor: "#EDEADF" }} */>
         <div className='nav-c pt-2 pb-2'>
@@ -185,7 +196,14 @@ const Example = (props) => {
                     </div>
                   }
                 </div>
-                <FaShoppingBag onClick={handleOrdPage} className='ml-3'/>
+                <div style={{position: "relative"}}>
+                  <FaShoppingBag onClick={handleOrdPage} className='ml-3'/>
+                    {props.orders.length > 0 && (
+                      <div className="bubble">
+                        {props.orders.length}
+                      </div>
+                    )}
+                </div>
             </MediaQuery>
           </Navbar>
           <AnimatePresence>
