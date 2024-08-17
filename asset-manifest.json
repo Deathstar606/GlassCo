@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/GlassCo/static/css/main.e6f68d5c.css",
-    "main.js": "/GlassCo/static/js/main.1ba1ba3b.js",
+    "main.css": "/GlassCo/static/css/main.8c8e884c.css",
+    "main.js": "/GlassCo/static/js/main.10b2c002.js",
     "static/js/787.2e4ac314.chunk.js": "/GlassCo/static/js/787.2e4ac314.chunk.js",
     "static/media/man-with-sunglasses-wearing-white-t-shirt-posing.jpg": "/GlassCo/static/media/man-with-sunglasses-wearing-white-t-shirt-posing.598941be6e6e5a5c87a4.jpg",
     "static/media/cute-pretty-beautiful-woman-wears-loose-sweater-black-trousers-holds-her-hands-pocket.jpg": "/GlassCo/static/media/cute-pretty-beautiful-woman-wears-loose-sweater-black-trousers-holds-her-hands-pocket.84d59f37df3190a32fdb.jpg",
@@ -9,12 +9,12 @@
     "static/media/eye-Exam.webp": "/GlassCo/static/media/eye-Exam.a0e86368bd24cbe593dc.webp",
     "static/media/sunglass.png": "/GlassCo/static/media/sunglass.d2aa228aea456ebaa596.png",
     "index.html": "/GlassCo/index.html",
-    "main.e6f68d5c.css.map": "/GlassCo/static/css/main.e6f68d5c.css.map",
-    "main.1ba1ba3b.js.map": "/GlassCo/static/js/main.1ba1ba3b.js.map",
+    "main.8c8e884c.css.map": "/GlassCo/static/css/main.8c8e884c.css.map",
+    "main.10b2c002.js.map": "/GlassCo/static/js/main.10b2c002.js.map",
     "787.2e4ac314.chunk.js.map": "/GlassCo/static/js/787.2e4ac314.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6f68d5c.css",
-    "static/js/main.1ba1ba3b.js"
+    "static/css/main.8c8e884c.css",
+    "static/js/main.10b2c002.js"
   ]
 }
