@@ -59,6 +59,7 @@ const activeColor = {
   };
 
 const Mens = (props) => {
+    console.log(props)
     const [isMat, setIsMat] = useState(false);
     const [isShape, setIsShape] = useState(false);
     const [isColor, setIsColor] = useState(false);

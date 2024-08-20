@@ -144,9 +144,9 @@ const Example = (props) => {
                 <NavItem className='nav-ele'>
                   <div>Sunglasses</div>
                   <ul className='nav-sub' style={{ listStyleType: 'none' }}>
-                    <RouterLink to="/home/sunglass"><li className='text-center'>All Sunglasses</li></RouterLink>
-                    <RouterLink to="/home/sunglass/men"><li className='text-center'>For Men</li></RouterLink>
-                    <RouterLink to="/home/sunglass/women"><li className='text-center'>For Women</li></RouterLink>
+                    <RouterLink style={{textDecoration: "none", color: "inherit"}} to="/home/sunglass"><li className='text-center'>All Sunglasses</li></RouterLink>
+                    <RouterLink style={{textDecoration: "none", color: "inherit"}} to="/home/sunglass/men"><li className='text-center'>For Men</li></RouterLink>
+                    <RouterLink style={{textDecoration: "none", color: "inherit"}} to="/home/sunglass/women"><li className='text-center'>For Women</li></RouterLink>
                   </ul>
                 </NavItem>
                 <NavItem className='nav-ele'>
@@ -157,8 +157,14 @@ const Example = (props) => {
                     <li className='text-center'>For Women</li>
                   </ul>
                 </NavItem>
-                <NavItem className='nav-ele'>
-                  <RouterLink to="/home/doctors"><li className='text-center'>Make an Appointment</li></RouterLink>
+                <NavItem>
+                  <RouterLink
+                    className='nav-ele' 
+                    to="/home/doctors" 
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    <li className='text-center'>Make an Appointment</li>
+                  </RouterLink>
                 </NavItem>
                 <NavItem className='nav-ele'>
                   <div>Visit us</div>

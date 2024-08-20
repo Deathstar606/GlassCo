@@ -11,6 +11,7 @@ import { Autoplay } from 'swiper/modules';
 import { baseUrl } from "../Redux/shared/baseurl";
 import "./card.css";
 import MediaQuery from "react-responsive";
+import { Loading } from "./LoadingComponent";
 
 function Section({ children }) {
     const ref = useRef(null);
@@ -30,7 +31,12 @@ function Section({ children }) {
 }
 
 function BestSell(props) {
-
+    if (props.sunglass.isLoading) {
+        return (
+            <Loading/>
+        )
+    }
+    
     const glasses = props.sunglass.sunglass.map((glass, index) => {
         if (glass.best) {
             return (

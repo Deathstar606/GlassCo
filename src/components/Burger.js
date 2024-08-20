@@ -53,13 +53,13 @@ useEffect(() => {
                     transition={{ duration: 0.3 }}
                     style={{ paddingTop: "10px" }} // Added styles
                     >
-                      <Link to="/home/sunglass" onClick={toggleMenu}>
+                      <Link to="/home/sunglass" style={{textDecoration: "none", color: "inherit"}} onClick={toggleMenu}>
                         <h5 className='text-center'>All Sunglasses</h5>
                       </Link>
-                      <Link to="/home/sunglass/men" onClick={toggleMenu}>
+                      <Link to="/home/sunglass/men" style={{textDecoration: "none", color: "inherit"}} onClick={toggleMenu}>
                         <h5 className='text-center'>For Men</h5>
                       </Link>
-                      <Link to="/home/sunglass/women" onClick={toggleMenu}>
+                      <Link to="/home/sunglass/women" style={{textDecoration: "none", color: "inherit"}} onClick={toggleMenu}>
                         <h5 className='text-center'>For Women</h5>
                       </Link>
                     </motion.div>

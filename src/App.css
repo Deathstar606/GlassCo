@@ -27,6 +27,8 @@ body {
 .nav-ele {
   padding: 6px 20px 0px 20px;
   display: inline-block;
+  text-decoration: none;
+  color: inherit;
   justify-content: center;
   transition: all ease smooth 0.3s;
 }

@@ -17,6 +17,7 @@ import { Link, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchSun, fetchOrders, addNewOrder, removeExistingOrder, loginUser, logoutUser } from '../Redux/ActionCreators';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Loading } from './LoadingComponent';
 
 const mapStateToProps = (state) => {
   return {
@@ -77,16 +78,28 @@ const Main = (props) => {
   };
 
   const AllSun = ({ sunglasses }) => {
+    if (sunglasses.isLoading) {
+      return (<Loading />);
+    }
     return <Mens glasses={sunglasses.sunglass} />
   }
 
   const FilteredMensSun = ({ sunglasses }) => {
+    if (sunglasses.isLoading) {
+      return (<Loading />);
+    }
     const filteredSunglasses = sunglasses.sunglass.filter(sunglass => sunglass.gender === 'Men' || sunglass.gender === 'Unisex');
     return <Mens glasses={filteredSunglasses} />;
   };
 
   const FilteredWoMensSun = ({ sunglasses }) => {
-    const filteredSunglasses = sunglasses.sunglass.filter(sunglass => sunglass.gender === 'Women' || sunglass.gender === 'Unisex');
+    if (sunglasses.isLoading) {
+      return (<Loading />);
+    }
+  
+    const filteredSunglasses = sunglasses.sunglass.filter(
+      (sunglass) => sunglass.gender === 'Women' || sunglass.gender === 'Unisex'
+    );
     return <Mens glasses={filteredSunglasses} />;
   };
 

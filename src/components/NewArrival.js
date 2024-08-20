@@ -8,8 +8,9 @@ import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from 'swiper/modules';
 import { baseUrl } from "../Redux/shared/baseurl";
-import "./card.css";
 import MediaQuery from "react-responsive";
+import { Loading } from "./LoadingComponent";
+import "./card.css";
 
 function Section({ children }) {
     const ref = useRef(null);
@@ -102,6 +103,11 @@ export const Product = ({ child }) => {
 };
 
 function NewArr(props) {
+    if (props.sunglass.isLoading) {
+        return (
+            <Loading/>
+        )
+    }
 
     const glasses = props.sunglass.sunglass.map((glass, index) => {
         if (glass.new) {
