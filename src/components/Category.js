@@ -3,8 +3,8 @@ import { Container, Row, Col, CardImg, Button } from "reactstrap";
 import { Link } from "react-router-dom";
 import "./card.css";
 import demo from "../images/eye-Exam.webp";
-import men from "../images/category/man-with-sunglasses-wearing-white-t-shirt-posing.jpg"
-import women from "../images/category/cute-pretty-beautiful-woman-wears-loose-sweater-black-trousers-holds-her-hands-pocket.jpg"
+import men from "../images/carousel-image-4_eyeglasses_PDP_reese_men.png"
+import women from "../images/carousel-image-4_eyeglasses_PDP_wanda_women.png"
  
 function Category () {
     return (

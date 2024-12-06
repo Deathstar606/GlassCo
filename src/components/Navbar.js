@@ -135,7 +135,7 @@ const Example = (props) => {
           </>
         )}
       </MediaQuery>
-      <div className='d-flex justify-content-center' /* style={{ backgroundColor: "#EDEADF" }} */>
+      <div className='d-flex justify-content-center'>
         <div className='nav-c pt-2 pb-2'>
           <Navbar light expand="md">
             <NavbarBrand href="/" className='text-dark pr-4'>GlassCo</NavbarBrand>
