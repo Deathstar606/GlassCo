@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/GlassCo/static/css/main.5697e346.css",
-    "main.js": "/GlassCo/static/js/main.4bca186d.js",
+    "main.js": "/GlassCo/static/js/main.1a31a96a.js",
     "static/js/787.2e4ac314.chunk.js": "/GlassCo/static/js/787.2e4ac314.chunk.js",
-    "static/media/man-with-sunglasses-wearing-white-t-shirt-posing.jpg": "/GlassCo/static/media/man-with-sunglasses-wearing-white-t-shirt-posing.598941be6e6e5a5c87a4.jpg",
-    "static/media/cute-pretty-beautiful-woman-wears-loose-sweater-black-trousers-holds-her-hands-pocket.jpg": "/GlassCo/static/media/cute-pretty-beautiful-woman-wears-loose-sweater-black-trousers-holds-her-hands-pocket.84d59f37df3190a32fdb.jpg",
     "static/media/about.jpg": "/GlassCo/static/media/about.25387cac36d9172f8ca2.jpg",
+    "static/media/carousel-image-4_eyeglasses_PDP_reese_men.png": "/GlassCo/static/media/carousel-image-4_eyeglasses_PDP_reese_men.9f76a9ede41a348e7bee.png",
+    "static/media/carousel-image-4_eyeglasses_PDP_wanda_women.png": "/GlassCo/static/media/carousel-image-4_eyeglasses_PDP_wanda_women.61e21dfa2b7d75b18516.png",
+    "static/media/23002_speye15757vminnovatorportraitassets_image_hires_307830.jpg": "/GlassCo/static/media/23002_speye15757vminnovatorportraitassets_image_hires_307830.2c98512493ffde59d8b5.jpg",
     "static/media/eye-Exam.webp": "/GlassCo/static/media/eye-Exam.a0e86368bd24cbe593dc.webp",
     "static/media/sunglass.png": "/GlassCo/static/media/sunglass.d2aa228aea456ebaa596.png",
     "index.html": "/GlassCo/index.html",
     "main.5697e346.css.map": "/GlassCo/static/css/main.5697e346.css.map",
-    "main.4bca186d.js.map": "/GlassCo/static/js/main.4bca186d.js.map",
+    "main.1a31a96a.js.map": "/GlassCo/static/js/main.1a31a96a.js.map",
     "787.2e4ac314.chunk.js.map": "/GlassCo/static/js/787.2e4ac314.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5697e346.css",
-    "static/js/main.4bca186d.js"
+    "static/js/main.1a31a96a.js"
   ]
 }
